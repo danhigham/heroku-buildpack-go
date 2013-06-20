@@ -56,7 +56,7 @@ PATH=$GOROOT/bin:$PATH
 if ! (which hg > /dev/null && which bzr > /dev/null)
 then
     echo -n "       Installing Virtualenv..."
-    virtualenv --python $python --distribute --never-download --prompt='(venv) ' $venv > /dev/null 2>&1
+    virtualenv --python $python --distribute --never-download --prompt='(venv) ' $venv 2>&1
     . $venv/bin/activate 2>&1
     echo " done"
 
